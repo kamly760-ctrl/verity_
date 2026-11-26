@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verity · Truth table engine for Discrete Structures</title>
+<meta name="description" content="Truth tables, logical equivalence, minterms, DNF and CNF. Discrete Structures project.">
+<link rel="icon" type="image/svg+xml" href="logo.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="intro" role="dialog" aria-label="Verity intro" hidden>
+  <div class="intro-in">
+    <img src="logo.svg" width="112" height="112" alt="Verity logo">
+    <h1>Verity</h1>
+    <p class="tag">Truth table engine for Discrete Structures</p>
+    <p class="by">Made by Yusif Kamel</p>
+    <div class="bar"><i></i></div>
+  </div>
+  <button id="skip" type="button">Skip</button>
+</div>
+<header class="top">
+  <div class="brand">
+    <img src="logo.svg" width="38" height="38" alt="Verity logo">
+    <div><b>Verity</b><span>Truth table engine for Discrete Structures</span></div>
+  </div>
+  <nav class="tabs" role="tablist">
+    <button role="tab" data-tab="table" class="on">Truth Table</button>
+    <button role="tab" data-tab="equiv">Equivalence</button>
+    <button role="tab" data-tab="forms">Normal Forms</button>
+  </nav>
+</header>
+
+<main>
+  <section class="panel input">
+    <div class="field" id="f1">
+      <label for="e1" id="l1">Expression</label>
+      <input id="e1" spellcheck="false" autocomplete="off" value="(A and B) or not C" placeholder="e.g. (A and B) or not C">
+    </div>
+    <div class="field" id="f2" hidden>
+      <label for="e2">Second expression</label>
+      <input id="e2" spellcheck="false" autocomplete="off" value="not A or not B" placeholder="e.g. not A or not B">
+    </div>
+    <div class="chips" id="ops" aria-label="Insert">
+      <button data-ins=" not ">¬ not</button><button data-ins=" and ">∧ and</button><button data-ins=" or ">∨ or</button>
+      <button data-ins=" implies ">→ implies</button><button data-ins=" iff ">↔ iff</button>
+      <button data-ins="(">(</button><button data-ins=")">)</button>
+      <span class="sep"></span>
+      <button data-ins="A">A</button><button data-ins="B">B</button><button data-ins="C">C</button><button data-ins="D">D</button>
+    </div>
+    <div class="row">
+      <div class="presets"><span>Try:</span><span id="presets"></span></div>
+      <label class="switch" id="stepsWrap"><input type="checkbox" id="steps" checked><i></i> Show steps</label>
+    </div>
+    <div class="hint">Words or symbols: <code>not ¬ ! ~</code> <code>and ∧ &amp;</code> <code>or ∨ |</code> <code>implies → -&gt;</code> <code>iff ↔ &lt;-&gt;</code> · up to 6 variables</div>
+  </section>
+
+  <section id="out" aria-live="polite"></section>
+</main>
+
+<footer>
+  <span>Verity · Horus University · Open source · <a href="https://github.com/kamly760-ctrl/verity_" id="repo">GitHub</a> · The same logic is implemented in C++ (<code>src/truth_table.cpp</code>)</span>
+</footer>
+<script src="logic.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

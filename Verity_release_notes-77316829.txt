@@ -1,0 +1,15 @@
+Title: Verity v1.0
+
+Verity v1.0 - Truth table engine for Discrete Structures
+
+Generate truth tables for any logical expression (1 to 6 variables), classify it as Tautology, Contradiction or Contingency, check logical equivalence, and get minterms, maxterms, DNF and CNF. Step columns show every sub-expression.
+
+Downloads (Windows):
+- Verity_GUI.exe - window version
+- Verity_Console.exe - console version
+
+Windows may show a warning the first time (More info, then Run anyway), because the files are not code-signed.
+
+Source code is in this repository (C++ in src/, web version in web/).
+
+Made by Yusif Kamel - Horus University, Faculty of AI.
