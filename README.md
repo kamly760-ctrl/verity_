@@ -70,7 +70,7 @@ F | F | T
 ```
 
 `src/truth_table_gui.cpp` is an optional native Windows (Win32) window version with the same logic. Build it with MinGW:
-`g++ -std=c++11 -O2 -static -mwindows -o VerityGUI.exe src/truth_table_gui.cpp -lcomdlg32 -lgdi32`.
+`windres src/verity.rc -O coff -o verity.res && g++ -std=c++14 -O2 -static -mwindows -o VerityGUI.exe src/truth_table_gui.cpp verity.res -lcomdlg32 -lgdi32 -luser32` (the window is resizable and DPI-aware; `verity_core.h` and `verity.ico` are in `src/`).
 
 ## How it works
 
